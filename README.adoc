@@ -13,6 +13,7 @@ Chocolatey package for Ethereum. This allows (un)installing the client on window
 You can visit the project page on https://github.com/chevdor/ethereum-chocolatey[GitHub].
 
 The Github project for AlethZero is located at https://github.com/ethereum/cpp-ethereum[here].
+The Github project for Geth is located at https://github.com/ethereum/go-ethereum[here].
 
 You can find the list of available packages on https://chocolatey.org/packages?q=ethereum&prerelease=true&sortOrder=relevance[chocolatey.org] or read more about https://github.com/chocolatey/choco/wiki[chocolatey].
 
@@ -21,7 +22,9 @@ WARNING: The *latest* version changes very often. The package downloads the late
 == (Un)Installation
 First ensure you have installed chocolatey: https://chocolatey.org/. You will find a one-liner on the site to install it.
 
-NOTE: At the moment, AlethZero is still a beta, so is the chocolatey package, so dont´t forget the -pre flag!
+NOTE: At the moment, AlethZero and Geth are still a beta, so is the chocolatey package, so dont´t forget the -pre flag!
+
+NOTE: All the options below also work by replacing `alethzero` with `geth`
 
 To find the latest package: 
 
@@ -44,23 +47,23 @@ To uninstall AlethZero:
 
 * Download the latest build from the official repo 
 * Store the file into your temp folder
-* Unzip it in your %ProgramFiles%\AlethZero-stable
+* Unzip it in your %ProgramFiles%\<client>-stable
 * Delete the temp file
 
 === Uninstall
 
-* Wipe the install folder %ProgramFiles%\AlethZero
-* Delete the registry keys related to AlethZero
+* Wipe the install folder %ProgramFiles%\AlethZero or %ProgramFiles%\Geth
+* Delete the registry keys related to AlethZero or Geth
 
-NOTE: AlethZero is a subkey of Ethereum in the registry. The uninstall process does *not* remove the ethereum key.
+NOTE: AlethZero and Geth are subkeys of Ethereum in the registry. The uninstall process does *not* remove the ethereum key.
 
 == Can I trust it?
 No! Never trust. Check it yourself!
 
 You can find the scripts here: 
 
-* Install: https://github.com/chevdor/ethereum-chocolatey/blob/master/tools/chocolateyInstall.ps1[chocolateyInstall.ps1]
-* Uninstall: https://github.com/chevdor/ethereum-chocolatey/blob/master/tools/chocolateyUninstall.ps1[chocolateyUninstall.ps1]
+* Install: https://github.com/tgerring/ethereum-chocolatey/blob/master/tools/chocolateyInstall.ps1[chocolateyInstall.ps1]
+* Uninstall: https://github.com/tgerring/ethereum-chocolatey/blob/master/tools/chocolateyUninstall.ps1[chocolateyUninstall.ps1]
 
 You can also see the script on the chocolatey.org website.
 
@@ -84,3 +87,8 @@ You can also easily build the package yourself using the "chocolatey pack" comma
 The local install then goes with:
  
  cinst -pre alethzero-stable -source %cd%
+
+or
+
+ cinst -pre geth-latest -source %cd%
+
