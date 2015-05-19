@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2011/10/nuspec.xsd">
     <metadata>
-        <id>Geth-Latest</id>
-        <version>0.9.x.54-latest</version>
+        <id>geth-latest</id>
+        <version>0.9.22.60</version>
         <title>Geth Latest</title>
         <authors>Taylor Gerring</authors>
         <owners>Taylor Gerring</owners>
