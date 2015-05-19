@@ -1,20 +1,18 @@
-$packageName    = 'Geth-stablet'
+$packageName    = 'geth-stable'
 
 $source = "https://build.ethdev.com/builds/Windows%20Go%20master%20branch/Geth-Win64-20150508152915-0.9.17-60--c8fc4ce.7z"
-$destination = "$env:temp\Geth-Win64-stable7z"
+$destination = "$env:chocolateyPackageFolder\tools"
+$dlname = "Geth-Win64-stable.7z"
+$7za = "$env:chocolateyPackageFolder\..\7zip.commandline\tools\7za.exe"
 
-Write-Host Let me get the latest version for you. I am copying it in your temp folder:
-Write-Host   $destination 
-Invoke-WebRequest $source -OutFile "$destination"
+Write-Host Let me get the latest version for you. I am copying it to the folder:
+Write-Host $destination\$dlname 
+Get-ChocolateyWebFile 'geth' "$destination\$dlname" "$source"
 
-# if (-not (test-path "$env:ProgramFiles\7-Zip\7z.exe")) {throw "$env:ProgramFiles\7-Zip\7z.exe needed"} 
-# set-alias sz "$env:ProgramFiles\7-Zip\7z.exe"  
+& $7za x -y "-o$destination" $destination\$dlname
 
-7za x -aoa -y -o"$env:ProgramFiles\$packageName\" "$destination"
+Write-Host Cleaning up the downloaded file.
+Remove-Item $destination\$dlname
 
-Write-Host Cleaning up the downloaded file from the temp folder.
-remove-item "$destination"
-
-Write-Host All done, you can start Geth from its install folder, I try to send you there!
-Write-Host   "$env:ProgramFiles\$packageName\"
-cd "$env:ProgramFiles\$packageName\"
+Write-Host All done, you can start Geth from its install folder at
+Write-Host ---> $env:chocolateyPackageFolder\tools\geth.exe

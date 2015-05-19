@@ -1,4 +1,4 @@
-$packageName = 'Geth-stable'    
+$packageName = 'geth-stable' 
 
-remove-item "$env:ProgramFiles\$packageName\"  -recurse -force -confirm:$false
-remove-Item -Path HKCU:\Software\ethereum\geth
+# Remove-Item "$env:ProgramFiles\$packageName\"  -recurse -force -confirm:$false
+#Remove-Item -Path HKCU:\Software\ethereum\geth
