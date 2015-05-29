@@ -1,5 +1,5 @@
 $packageName    = 'geth-stable'
-$source = "https://github.com/ethereum/go-ethereum/releases/download/0.9.23/Geth-Win64-20150521175528-0.9.23-60--13e662f.7z"
+$source = "https://build.ethdev.com/builds/Windows%20Go%20master%20branch/Geth-Win64-20150528162342-0.9.26-60--0e703d9.7z"
 
 $destination = "$env:chocolateyPackageFolder\tools"
 $dlname = "$packageName.7z"
