@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/10/nuspec.xsd">
     <metadata>
         <id>geth-stable</id>
-        <version>0.9.26.0</version>
+        <version>0.9.28.0</version>
         <title>Geth Stable</title>
         <authors>Taylor Gerring</authors>
         <owners>Taylor Gerring</owners>
@@ -15,9 +15,6 @@
         <releaseNotes />
         <copyright>(C)2015 - Taylor Gerring</copyright>
         <tags>Ethereum, Geth, Crypto, Ether, Contract</tags>
-        <dependencies>
-            <dependency id="7zip.commandline" version="9.20.0.20130618" />
-        </dependencies>
     </metadata>
     <files>
         <file src="tools\chocolateyInstall.ps1" target="tools\chocolateyInstall.ps1" />
