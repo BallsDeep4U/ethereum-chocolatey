@@ -6,5 +6,5 @@ Write-Host For more information see https://github.com/ethereum/go-ethereum/wiki
 $shortcutFile = Join-Path $env:userprofile "Desktop\$packageName.bat"
 
 
-if (Test-Path "$$shortcutFile") {Remove-Item $$shortcutFile} 
+if (Test-Path "$shortcutFile") {Remove-Item $shortcutFile} 
 
