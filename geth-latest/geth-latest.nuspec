@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/10/nuspec.xsd">
     <metadata>
         <id>geth-latest</id>
-        <version>0.9.37.0</version>
+        <version>0.9.39.0</version>
         <title>Geth Latest</title>
         <authors>Taylor Gerring</authors>
         <owners>Taylor Gerring</owners>

@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/10/nuspec.xsd">
     <metadata>
         <id>geth-stable</id>
-        <version>0.9.36.0</version>
+        <version>0.9.38.0</version>
         <title>Geth Stable</title>
         <authors>Taylor Gerring</authors>
         <owners>Taylor Gerring</owners>
