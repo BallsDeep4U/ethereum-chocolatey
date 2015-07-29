@@ -13,3 +13,10 @@ Install-ChocolateyZipPackage "$packageName" "$url" "$toolsDir"
 $batContent = "$toolsDir\geth.exe console"
 
 "$batContent"| Set-Content $shortcutFile -Encoding ASCII
+
+Write-Host "`n`n`n"
+Write-Host "###########################################################################"
+Write-Host "Please note that you need to manually import the Genesis block on first run"
+Write-Host "You can do this by editing the batfile on your desktop named geth-stable"
+Write-Host "And adding --genesis c:\path\to\genesis\file before 'console'"
+Write-Host "###########################################################################"
