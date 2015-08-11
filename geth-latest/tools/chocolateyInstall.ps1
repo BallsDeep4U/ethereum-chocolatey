@@ -1,5 +1,5 @@
 $packageName    = 'geth-latest'
-$url = "https://build.ethdev.com/builds/Windows%20Go%20develop%20branch/Geth-Win64-latest.7z"
+$url = 'https://build.ethdev.com/builds/Windows%20Go%20develop%20branch/Geth-Win64-latest.zip'
 
 $toolsDir = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $shortcutFile = Join-Path $env:userprofile "Desktop\$packageName.bat"
