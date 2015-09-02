@@ -1,5 +1,5 @@
 $packageName    = 'geth-stable'
-$url = 'https://github.com/ethereum/go-ethereum/releases/download/v1.1.0/Geth-Win64-20150825140940-1.1.0-fd512fa.zip'
+$url = 'https://github.com/ethereum/go-ethereum/releases/download/v1.1.1/Geth-Win64-20150902012504-1.1.1-8f09242.zip'
 
 $toolsDir = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $shortcutFile = Join-Path $env:userprofile "Desktop\$packageName.bat"
