@@ -1,5 +1,5 @@
 $packageName    = 'geth-stable'
-$url = 'https://github.com/ethereum/go-ethereum/releases/download/v1.1.1/Geth-Win64-20150902012504-1.1.1-8f09242.zip'
+$url = 'https://github.com/ethereum/go-ethereum/releases/download/v1.1.3/Geth-Win64-20150910083726-1.1.3-9ebe787.zip'
 
 $toolsDir = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $shortcutFile = Join-Path $env:userprofile "Desktop\$packageName.bat"
@@ -14,9 +14,3 @@ $batContent = "$toolsDir\geth.exe console"
 
 "$batContent"| Set-Content $shortcutFile -Encoding ASCII
 
-Write-Host "`n`n`n"
-Write-Host "###########################################################################"
-Write-Host "Please note that you need to manually import the Genesis block on first run"
-Write-Host "You can do this by editing the batfile on your desktop named geth-stable"
-Write-Host "And adding --genesis c:\path\to\genesis\file before 'console'"
-Write-Host "###########################################################################"
